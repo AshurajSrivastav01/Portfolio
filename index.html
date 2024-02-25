@@ -93,6 +93,71 @@
                 border-right-color: transparent;
             }
             } */
+
+            .img, .content
+            {
+                border: 1px solid black;
+                height: 500px;
+                width: 635px;
+            }
+            .second-layer
+            {
+                margin-top: 50px;
+                display: flex;
+                padding: 20px;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+            .content
+            {
+                padding: 10px;
+
+            }
+            .content h2
+            {
+                border-bottom: 5px solid white;
+                width: 150px;
+                padding: 0px 0px 0px 5px;
+                color: white;
+            }
+            .btn
+            {
+                gap: 5px;
+            }
+            .btn .btn1
+            {
+                margin-top: 37px;
+                width: 120px;
+                height: 45px;
+                font-weight: 900;
+                font-size: 22px;
+                border-radius: 50px;
+                margin-right: 15px;
+                color: #7a5454;
+                border: 5px solid;
+                background-color: black;
+            }
+            .btn .btn2
+            {
+                margin-top: 37px;
+                color: #7a5454;
+                font-size: 22px;
+                font-weight: 900;
+                height: 45px;
+                border-radius: 50px;
+                width: 176px;
+                border: 5px solid;
+                background-color: black;
+            }
+            .btn .btn1:hover
+            {
+                color: #6ff2e5;
+            }
+            .btn .btn2:hover
+            {
+                color: #6ff2e5;
+            }
     </style>
 </head>
 <body>
@@ -106,7 +171,7 @@
                 <div class="collapse navbar-collapse" id="navbarText">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a href="#" class="nav-link">About</a>
+                            <a href="#about" class="nav-link">About</a>
                         </li>
                         <li class="nav-item">
                             <a href="#" class="nav-link">Projects</a>
@@ -120,21 +185,30 @@
         </nav>
         <hr style="color: gray; margin: 0rem;">
         <div class="container">
-            <div class="right-box">
-                <p class="intro" style="margin-top: 1rem;">Hello I'm</p>
-                <p class="intro" id="txt"></p>
-                <span style="color: white;font-size: 21px;">Enthusiastic web developer with a focus on PHP, dedicated to creating elegant and efficient solutions that bring ideas to life.</span>
+            <div>
+                <div class="right-box">
+                    <p class="intro" style="margin-top: 1rem;">Hello I'm</p>
+                    <p class="intro" id="txt"></p>
+                    <span style="color: white;font-size: 21px;">Enthusiastic web developer with a focus on PHP, dedicated to creating elegant and efficient solutions that bring ideas to life.</span>
+                </div>
+                <div class="left-box">
+    
+                </div>
             </div>
-            <div class="left-box">
-
+            <div class="btn">
+                <input class="btn1" type="button" value="Hire Me">
+                <input class="btn2" type="button" value="Download CV">
             </div>
         </div>
-        <div style="border: 1px solid gray;">
+        <div class="container second-layer" id="about" style="border: 1px solid gray;">
             <div class="img">
-                <img src="" alt="">
+                <!-- <img src="" alt=""> -->
             </div>
             <div class="content">
-
+                <h2>About Me</h2>
+                <p>
+                    
+                </p>
             </div>
         </div>
         <!-- <div class="loader">
