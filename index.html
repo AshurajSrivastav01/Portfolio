@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap CSS files -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap-grid.min.css">
+    <!-- bootstrap JS Files  -->
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <title>Portfolio</title>
+    <style>
+        *
+        {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Roboto;
+        }
+        body{
+            background-color: #020f1c!important;
+        }
+        .navbar-brand{
+            font-size: 2.25rem;
+        }
+        .nav-link
+        {
+            font-size: 1.3rem;
+        }
+        .navbar-nav
+        {
+            gap: 55px;
+        }
+        .intro
+        {
+            margin-bottom: 0rem;
+            font-size: 90px;
+            font-weight: 900;
+            background: linear-gradient(to right,#ff5050, #0099ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .bg-dark
+        {
+            background-color: #020f1c!important;
+        }
+        .right-box
+        {
+            width: 65%;
+        }
+        .nav-link 
+        {
+            color: white !important ; 
+        }
+
+        /* for Loader  */
+        /* .loader {
+            position: relative;
+            overflow: hidden;
+            border-right: 3px solid;
+            width: 100%;
+            animation: typewriter 2s steps(10)  infinite alternate , blink 0.5s steps(15) infinite;
+            }
+
+            .loader-text {
+            font-size: 40px;
+            font-weight: 700;
+            background: linear-gradient(to right,#159957, #155799);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            }
+
+            @keyframes typewriter {
+            0% {
+                width: 0px;
+            }
+
+            100% {
+                width: 500px;
+            }
+            }
+
+            @keyframes blink {
+            0% {
+                border-right-color: rgba(255,255,255,.75);
+                ;
+            }
+
+            100% {
+                border-right-color: transparent;
+            }
+            } */
+    </style>
+</head>
+<body>
+    <section>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand">Ashu Raj Srivastav</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarText">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <hr style="color: gray; margin: 0rem;">
+        <div class="container">
+            <div class="right-box">
+                <p class="intro" style="margin-top: 1rem;">Hello I'm</p>
+                <p class="intro" id="txt"></p>
+                <span style="color: white;font-size: 21px;">Enthusiastic web developer with a focus on PHP, dedicated to creating elegant and efficient solutions that bring ideas to life.</span>
+            </div>
+            <div class="left-box">
+
+            </div>
+        </div>
+        <div style="border: 1px solid gray;">
+            <div class="img">
+                <img src="" alt="">
+            </div>
+            <div class="content">
+
+            </div>
+        </div>
+        <!-- <div class="loader">
+            <span class="loader-text">Ashu Raj Srivastav</span>
+        </div> -->
+    </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        var text = document.querySelector('.intro');
+        text.classList.add('show');
+        typeWriter();
+        });
+
+        var i = 0;
+        var txt = 'Web Developer';
+
+        function typeWriter() {
+            if (i < txt.length) {
+                document.getElementById("txt").innerHTML += txt.charAt(i);
+                i++;
+                setTimeout(typeWriter, 300);
+            }
+        }
+    </script>
+</body>
+</html>
