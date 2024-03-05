@@ -11,154 +11,15 @@
     <!-- bootstrap JS Files  -->
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Typed  -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- AOS Animation Liberary  -->
+    <link rel="stylesheet" href="aos-master/dist/aos.css">
+    <!-- <link rel="stylesheet" href="aos-master/dist/aos.js"> -->
+
     <title>Portfolio</title>
-    <style>
-        *
-        {
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-            font-family: Roboto;
-        }
-        body{
-            background-color: #020f1c!important;
-        }
-        .navbar-brand{
-            font-size: 2.25rem;
-        }
-        .nav-link
-        {
-            font-size: 1.3rem;
-        }
-        .navbar-nav
-        {
-            gap: 55px;
-        }
-        .intro
-        {
-            margin-bottom: 0rem;
-            font-size: 90px;
-            font-weight: 900;
-            background: linear-gradient(to right,#ff5050, #0099ff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .bg-dark
-        {
-            background-color: #020f1c!important;
-        }
-        .right-box
-        {
-            width: 65%;
-        }
-        .nav-link 
-        {
-            color: white !important ; 
-        }
-
-        /* for Loader  */
-        /* .loader {
-            position: relative;
-            overflow: hidden;
-            border-right: 3px solid;
-            width: 100%;
-            animation: typewriter 2s steps(10)  infinite alternate , blink 0.5s steps(15) infinite;
-            }
-
-            .loader-text {
-            font-size: 40px;
-            font-weight: 700;
-            background: linear-gradient(to right,#159957, #155799);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            }
-
-            @keyframes typewriter {
-            0% {
-                width: 0px;
-            }
-
-            100% {
-                width: 500px;
-            }
-            }
-
-            @keyframes blink {
-            0% {
-                border-right-color: rgba(255,255,255,.75);
-                ;
-            }
-
-            100% {
-                border-right-color: transparent;
-            }
-            } */
-
-            .img, .content
-            {
-                border: 1px solid black;
-                height: 500px;
-                width: 635px;
-            }
-            .second-layer
-            {
-                margin-top: 50px;
-                display: flex;
-                padding: 20px;
-                justify-content: space-between;
-                align-items: center;
-                flex-wrap: wrap;
-            }
-            .content
-            {
-                padding: 10px;
-
-            }
-            .content h2
-            {
-                border-bottom: 5px solid white;
-                width: 150px;
-                padding: 0px 0px 0px 5px;
-                color: white;
-            }
-            .btn
-            {
-                gap: 5px;
-            }
-            .btn .btn1
-            {
-                margin-top: 37px;
-                width: 120px;
-                height: 45px;
-                font-weight: 900;
-                font-size: 22px;
-                border-radius: 50px;
-                margin-right: 15px;
-                color: #7a5454;
-                border: 5px solid;
-                background-color: black;
-            }
-            .btn .btn2
-            {
-                margin-top: 37px;
-                color: #7a5454;
-                font-size: 22px;
-                font-weight: 900;
-                height: 45px;
-                border-radius: 50px;
-                width: 176px;
-                border: 5px solid;
-                background-color: black;
-            }
-            .btn .btn1:hover
-            {
-                color: #6ff2e5;
-            }
-            .btn .btn2:hover
-            {
-                color: #6ff2e5;
-            }
-    </style>
 </head>
 <body>
     <section>
@@ -168,6 +29,7 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                
                 <div class="collapse navbar-collapse" id="navbarText">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
@@ -185,14 +47,14 @@
         </nav>
         <hr style="color: gray; margin: 0rem;">
         <div class="container">
-            <div>
+            <div class="sec1">
                 <div class="right-box">
                     <p class="intro" style="margin-top: 1rem;">Hello I'm</p>
                     <p class="intro" id="txt"></p>
                     <span style="color: white;font-size: 21px;">Enthusiastic web developer with a focus on PHP, dedicated to creating elegant and efficient solutions that bring ideas to life.</span>
                 </div>
-                <div class="left-box">
-    
+                <div class="left-box" data-aos="fade-left" data-aos-duration="2000">
+                    <img src="img/logo.png" alt="" style="    margin-top: 26px;width: 325px;">
                 </div>
             </div>
             <div class="btn">
@@ -200,20 +62,37 @@
                 <input class="btn2" type="button" value="Download CV">
             </div>
         </div>
-        <div class="container second-layer" id="about" style="border: 1px solid gray;">
+        <hr class="container">
+        <div class="container second-layer" id="about" data-aos="fade-up" data-aos-duration="3000">
             <div class="img">
-                <!-- <img src="" alt=""> -->
+                <img src="img/logo2.png" alt="">
             </div>
             <div class="content">
                 <h2>About Me</h2>
                 <p>
-                    
-                </p>
+                    Welcome to my portfolio! I'm a passionate web developer with a strong foundation in both front-end and back-end technologies. My journey in web development began with mastering HTML, CSS, and JavaScript, which I've since expanded upon with frameworks like Bootstrap and libraries like jQuery.
+                    On the back end, I specialize in PHP and have experience working with Lumen for building basic APIs. My skills include implementing functionalities such as sending and verifying OTPs, as well as handling CRUD operations on databases.
+                    During my six-month internship as a PHP developer, I had the opportunity to apply my knowledge in real-world scenarios, collaborating with clients to make tailored changes to their websites and ensuring their satisfaction with the final product.
+                    With a keen eye for detail and a dedication to staying updated with the latest technologies, I strive to deliver clean, efficient, and user-friendly solutions for every project I undertake. Whether it's crafting responsive designs or optimizing back-end performance, I'm committed to exceeding expectations and creating impactful digital experiences.</p>
+                    <br><p></p>
             </div>
         </div>
-        <!-- <div class="loader">
-            <span class="loader-text">Ashu Raj Srivastav</span>
-        </div> -->
+        <hr class="container">
+        <!-- IT Skills  -->
+        <div class="container skill">
+            <h2>IT Skills</h2>
+            <div style="border: 1px solid black; width: 100%; height: 300px;">
+
+            </div>
+        </div>
+        <!-- Project Section  -->
+        <div class="container projects">
+            <h2>My Projects</h2>
+            <p>Here are a few past design projects I've worked on. Want to see more?</p>
+            <div>
+                
+            </div>
+        </div>
     </section>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -232,6 +111,12 @@
                 setTimeout(typeWriter, 300);
             }
         }
+    </script>
+    <script src="aos-master/dist/aos.js"></script>
+    <script>
+        AOS.init({
+        easing: 'ease-in-out-sine'
+        });
     </script>
 </body>
 </html>
