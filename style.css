@@ -1,0 +1,317 @@
+*
+        {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Roboto;
+        }
+        body{
+            background-color: #020f1c!important;
+        }
+        .navbar-brand{
+            font-size: 2.25rem;
+        }
+        .nav-link
+        {
+            font-size: 1.3rem;
+        }
+        .navbar-nav
+        {
+            gap: 55px;
+        }
+        .intro
+        {
+            margin-bottom: 0rem;
+            font-size: 90px;
+            font-weight: 900;
+            background: linear-gradient(to right,#ff5050, #0099ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .bg-dark
+        {
+            background-color: #020f1c!important;
+        }
+        .right-box
+        {
+            width: 55%;
+        }
+        .nav-link 
+        {
+            color: white !important ; 
+        }
+
+        /* for Loader  */
+            .img            {
+                border: 1px solid transparent;
+                width:  49%;
+            }
+            hr{
+                color: gray;
+            }
+            .content
+            {
+                border: 1px solid transparent;
+                height: 500px;
+                width: 635px;
+            }
+            .second-layer
+            {
+                margin-top: 50px;
+                display: flex;
+                padding: 20px;
+                justify-content: space-between;
+                align-items: flex-start;
+                flex-wrap: wrap;
+                border: 1px solid transparent !important;
+            }
+            .content
+            {
+                padding: 10px;
+
+            }
+            .content h2
+            {
+                border-bottom: 5px solid white;
+                width: 150px;
+                padding: 0px 0px 0px 5px;
+                color: white;
+            }
+            .content p{
+                color: white;
+                text-align: justify;
+                font-size: 18px;
+            }
+            .btn
+            {
+                gap: 5px;
+            }
+            .btn .btn1
+            {
+                margin-top: 37px;
+                width: 120px;
+                height: 45px;
+                font-weight: 900;
+                font-size: 22px;
+                border-radius: 50px;
+                margin-right: 15px;
+                color: #7a5454;
+                border: 5px solid;
+                background-color: black;
+            }
+            .btn .btn2
+            {
+                margin-top: 37px;
+                color: #7a5454;
+                font-size: 22px;
+                font-weight: 900;
+                height: 45px;
+                border-radius: 50px;
+                width: 176px;
+                border: 5px solid;
+                background-color: black;
+            }
+            .btn .btn1:hover
+            {
+                color: #6ff2e5;
+            }
+            .btn .btn2:hover
+            {
+                color: #6ff2e5;
+            }
+            .sec1
+            {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+            .left-box
+            {
+                margin-right: 7%;
+                margin-top: 2%;
+            }
+            .img img{
+                margin-left: auto;
+                margin-right: auto;
+                display: block;
+                width: 95%;
+            }
+
+            .skill h2
+            {
+                margin-top: 1.5rem;
+                border-bottom: 5px solid white;
+                width: 150px;
+                padding: 0px 0px 0px 5px;
+                color: white;
+                margin-left: auto;
+                margin-right: auto;
+                font-size: 40px;
+            }
+            .skill div{
+                border: 1px solid gray !important;
+                width: 100%;
+                height: 300px;
+            }
+            .projects h2
+            {
+                margin-top: 1.5rem;
+                border-bottom: 5px solid white;
+                width: 230px;
+                padding: 0px 0px 0px 5px;
+                color: white;
+                margin-left: auto;
+                margin-right: auto;
+                font-size: 40px;
+            }
+            .projects p
+            {
+                margin-top: 1.5rem;
+                text-align: center;
+                padding: 0px 0px 0px 5px;
+                color: white;
+                margin-left: auto;
+                margin-right: auto;
+                font-size: 25px;
+            }
+            .projects .plist{
+                /* border: 1px solid gray; */
+                width: 100%;
+                height: auto !important;
+                gap: 10px;
+                padding: 10px;
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .p1, .p2, .p3
+            {   
+                border: 1px solid gray;
+                height: 265px !important;
+                width: 418px;
+            }
+
+            .exp h2
+            {
+                margin-top: 1.5rem;
+                border-bottom: 5px solid white;
+                width: 310px;
+                padding: 0px 0px 0px 5px;
+                color: white;
+                margin-left: auto;
+                margin-right: auto;
+                font-size: 40px;
+            }
+            .exp p
+            {
+                margin-top: 1.5rem;
+                text-align: center;
+                padding: 0px 0px 0px 5px;
+                color: white;
+                margin-left: auto;
+                margin-right: auto;
+                font-size: 25px;
+            }
+            .exp-content
+            {
+                border: 1px solid gray;
+                width: 100%;
+                height: 350px;
+            }
+
+            .contact h2
+            {
+                margin-top: 1.5rem;
+                border-bottom: 5px solid white;
+                width: 223px;
+                padding: 0px 0px 0px 5px;
+                color: white;
+                margin-left: auto;
+                margin-right: auto;
+                font-size: 40px;
+            }
+            .contact p
+            {
+                margin-top: 1.5rem;
+                text-align: center;
+                padding: 0px 0px 0px 5px;
+                color: white;
+                margin-left: auto;
+                margin-right: auto;
+                font-size: 25px;
+            }
+            .contact-meta
+            {
+                border: 1px solid gray;
+                width: 100%;
+                height: 350px;
+            }
+            footer
+            {
+                border: 1px solid gray;
+                height: 500px;
+                width: 100%;
+                margin-top: 100px;
+            }
+
+            /* Media Queries  */
+            @media only screen and (max-width: 1007px) {
+                .intro {
+                  font-size: 55px;
+                }
+                .second-layer
+                {
+                    display: flex;
+                    justify-content: space-around;
+                }
+                .second-layer .content{
+                    width: 100%;
+                }
+              }
+              @media only screen and (max-width: 490px) {
+                .intro {
+                  font-size: 50px;
+                }
+                .second-layer
+                {
+                    display: flex;
+                    justify-content: space-around;
+                }
+                .second-layer .content{
+                    width: 100%;
+                }
+              }
+              @media only screen and (max-width: 980px) {
+                .p1, .p2, .p3
+                {
+                    width: 72%;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+                .plist{
+                    display: flex;
+                }
+              }
+              @media only screen and (max-width: 1396px) {
+                .p1, .p2, .p3
+                {
+                    width: 50%;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+                .plist{
+                    display: flex;
+                }
+              }
+              @media only screen and (max-width: 1401px) {
+                .intro {
+                  font-size: 80px;
+                }
+                .second-layer
+                {
+                    display: flex;
+                    justify-content: space-around;
+                }
+                .second-layer .content{
+                    width: 100%;
+                }
+              }
