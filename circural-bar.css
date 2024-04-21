@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*! CSS Used from: https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/styles/github.min.css */
+pre code.hljs {
+    display: block;
+    overflow-x: auto;
+    padding: 1em;
+}
+code.hljs {
+    padding: 3px 5px;
+}
+.hljs {
+    color: #24292e;
+    background: #fff;
+}
+.hljs-keyword {
+    color: #d73a49;
+}
+.hljs-attr,
+.hljs-number {
+    color: #005cc5;
+}
+.hljs-string {
+    color: #032f62;
+}
+.flex {
+    display: flex;
+}
+.info {
+    justify-content: space-between;
+    border-bottom: 1px solid #e6e6e6;
+    padding: 10px 0;
+    text-transform: uppercase;
+    font-size: 90%;
+    margin: auto -15px 30px;
+}
+.info-code {
+    cursor: pointer;
+}
+.info-code:hover {
+    color: salmon;
+}
+section {
+    position: relative;
+    background-color: #fff;
+    border-radius: 7px;
+    padding: 5px 30px 30px;
+    margin: 20px;
+    width: 260px;
+    height: 306px;
+}
+.code {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    width: 260px;
+    height: 0;
+    left: 0;
+    margin: auto;
+    line-height: 1.6;
+    transition: visibility 0s, opacity 0.5s linear;
+}
+pre {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+code {
+    height: calc(100% - 45px);
+    margin-top: -20px;
+}
+.pie-unit-11 {
+    fill: #f50057;
+    font-size: 1rem;
+}
+
+/* own  */
+
+.progress-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+  }
+
+  .progress-bar {
+    fill: none;
+    stroke: #6ff2e5;
+    stroke-width: 10;
+    stroke-linecap: round;
+    stroke-dasharray: 251;
+    stroke-dashoffset: 251;
+  }
+
+  .progress-text {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    fill: #6ff2e5;
+    text-anchor: middle;
+    dominant-baseline: middle;
+  }
+  
+  .additional-text {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    fill: #6ff2e5;
+    text-anchor: middle;
+    dominant-baseline: middle;
+  }
+  .cbar
+  {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .pskill-text
+  {
+    font-size: x-large;
+    font-weight: 600;
+    color: #6ff2e5;
+  }
+  body{
+    display: flex;
+    gap: 9px;
+    flex-wrap: wrap;
+    background-color: #212529;
+  }
