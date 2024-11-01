@@ -1,1 +1,1 @@
-webSample.free.nf
+https://websample.free.nf/?i=1
