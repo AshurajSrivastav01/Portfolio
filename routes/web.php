@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 # ------------------------------------ UI Routs for Redirection ------------------------------------
 // Frontend Routes
-Route::view('/', 'frontend.blog', ['Title' => 'Home - Modern Blog']);
+Route::view('/', 'frontend.home');
 Route::view('/about', 'frontend.about', ['Title' => 'About - Modern Blog']);
 Route::view('/contact', 'frontend.contact', ['Title' => 'Contact - Modern Blog']);
 Route::view('/Categories', 'frontend.categories', ['Title' => 'Categories - Modern Blog']);
