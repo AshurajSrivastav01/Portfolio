@@ -7,8 +7,8 @@
 
     <!-- Primary SEO -->
     <title>Home | Ashuraj Srivastav</title>
-    <meta name="description" content="{{meta_description}}">
-    <link rel="canonical" href="{{canonical_url}}">
+    <meta name="description" content="meta_description">
+    <link rel="canonical" href="canonical_url">
 
     <!-- Structured data (Article / Page) -->
     <script type="application/ld+json">
@@ -17,42 +17,42 @@
             "@type": "Article",
             "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "{{canonical_url}}"
+            "@id": "canonical_url"
             },
-            "headline": "{{page_title}}",
-            "description": "{{meta_description}}",
-            "image": ["{{image_url}}"],
+            "headline": "page_title",
+            "description": "meta_description",
+            "image": ["image_url"],
             "author": {
             "@type": "Person",
-            "name": "{{author_name}}"
+            "name": "author_name"
             },
             "publisher": {
             "@type": "Organization",
-            "name": "{{brand_name}}",
+            "name": "brand_name",
             "logo": {
                 "@type": "ImageObject",
-                "url": "{{brand_logo_url}}"
+                "url": "brand_logo_url"
             }
             },
-            "datePublished": "{{date_published}}",
-            "dateModified": "{{date_modified}}"
+            "datePublished": "date_published",
+            "dateModified": "date_modified"
         }
     </script>
 
     <!-- Open Graph -->
     <meta property="og:type" content="article">
-    <meta property="og:title" content="{{page_title}}">
-    <meta property="og:description" content="{{meta_description}}">
-    <meta property="og:url" content="{{canonical_url}}">
-    <meta property="og:image" content="{{image_url}}">
-    <meta property="og:site_name" content="{{brand_name}}">
+    <meta property="og:title" content="page_title">
+    <meta property="og:description" content="meta_description">
+    <meta property="og:url" content="canonical_url">
+    <meta property="og:image" content="image_url">
+    <meta property="og:site_name" content="brand_name">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="{{page_title}}">
-    <meta name="twitter:description" content="{{meta_description}}">
-    <meta name="twitter:image" content="{{image_url}}">
-    <meta name="twitter:site" content="@{{twitter_handle}}">
+    <meta name="twitter:title" content="page_title">
+    <meta name="twitter:description" content="meta_description}}">
+    <meta name="twitter:image" content="image_url">
+    <meta name="twitter:site" content="@twitter_handle">
 
     <!-- Robots -->
     <meta name="robots" content="index, follow">
@@ -67,15 +67,16 @@
 
 
     <!-- Custom Styling -->
-    <link rel="stylesheet" href="{{ asset('asset/css/heroSection.css') }}">
-    <link rel="stylesheet" href="{{ asset('asset/css/aboutSection.css') }}">
-    <link rel="stylesheet" href="{{ asset('asset/css/serviceSection.css') }}">
-    <link rel="stylesheet" href="{{ asset('asset/css/stackSection.css') }}">
-    <link rel="stylesheet" href="{{ asset('asset/css/action-button.css') }}">
-    <link rel="stylesheet" href="{{ asset('asset/css/educationSection.css') }}">
-    <link rel="stylesheet" href="{{ asset('asset/css/letsConnect.css') }}">
-    <link rel="stylesheet" href="{{ asset('asset/css/myBlogs.css') }}">
-    <link rel="stylesheet" href="{{ asset('asset/css/professionalJourney.css') }}">
+    <link rel="stylesheet" href="{{ asset('public/asset/css/heroSection.css') }}">
+    <link rel="stylesheet" href="{{ asset('public/asset/css/aboutSection.css') }}">
+    <link rel="stylesheet" href="{{ asset('public/asset/css/serviceSection.css') }}">
+    <link rel="stylesheet" href="{{ asset('public/asset/css/stackSection.css') }}">
+    <link rel="stylesheet" href="{{ asset('public/asset/css/action-button.css') }}">
+    <link rel="stylesheet" href="{{ asset('public/asset/css/educationSection.css') }}">
+    <link rel="stylesheet" href="{{ asset('public/asset/css/letsConnect.css') }}">
+    <link rel="stylesheet" href="{{ asset('public/asset/css/myBlogs.css') }}">
+    <link rel="stylesheet" href="{{ asset('public/asset/css/professionalJourney.css') }}">
+    <link rel="stylesheet" href="{{ asset('public/asset/css/myProjects.css') }}">
 </head>
 <body>
     <section class="hero-section">
@@ -400,6 +401,140 @@
                 <button class="btn cta-button" id="quoteButton">
                     Get a Free Quote <i class="fas fa-arrow-right ms-2"></i>
                 </button>
+            </div>
+        </div>
+    </section>
+
+        <!-- Projects Section -->
+    <section class="projects-section" id="projects">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">My Projects</h2>
+
+            <!-- Filter Tabs -->
+            <div class="filter-tabs">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="laravel">Laravel</button>
+                <button class="filter-btn" data-filter="ecommerce">Ecommerce</button>
+                <button class="filter-btn" data-filter="api">API</button>
+                <button class="filter-btn" data-filter="admin">Admin Panels</button>
+            </div>
+
+            <div class="row" id="projects-container">
+                <!-- Project 1 -->
+                <div class="col-lg-4 col-md-6 project-item" data-aos="fade-up" data-category="laravel admin">
+                    <div class="project-card">
+                        <img src="https://via.placeholder.com/600x400?text=Blog+CMS" alt="Blog CMS Platform" class="project-img">
+                        <div class="project-body">
+                            <h3 class="project-title">Blog CMS Platform</h3>
+                            <p class="project-desc">
+                                A complete content management system with admin panel and frontend.
+                                I developed both backend and admin interface, implementing user roles,
+                                rich text editing, and SEO features.
+                            </p>
+                            <div class="tech-stack">
+                                <span class="tech-badge">Laravel</span>
+                                <span class="tech-badge">MySQL</span>
+                                <span class="tech-badge">Bootstrap</span>
+                                <span class="tech-badge">JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn btn-github project-btn">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                                <a href="#" class="btn btn-demo project-btn">
+                                    <i class="fas fa-external-link-alt"></i> Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="col-lg-4 col-md-6 project-item" data-aos="fade-up" data-aos-delay="100" data-category="ecommerce">
+                    <div class="project-card">
+                        <img src="https://via.placeholder.com/600x400?text=Ecommerce" alt="Ecommerce Website" class="project-img">
+                        <div class="project-body">
+                            <h3 class="project-title">Ecommerce Website</h3>
+                            <p class="project-desc">
+                                Single vendor ecommerce platform with product management,
+                                cart system, and payment integration. I built the entire
+                                backend including order processing and inventory management.
+                            </p>
+                            <div class="tech-stack">
+                                <span class="tech-badge">Laravel</span>
+                                <span class="tech-badge">MySQL</span>
+                                <span class="tech-badge">Stripe API</span>
+                                <span class="tech-badge">Bootstrap</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn btn-github project-btn">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                                <button class="btn btn-disabled project-btn" disabled>
+                                    <i class="fas fa-lock"></i> Private
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="col-lg-4 col-md-6 project-item" data-aos="fade-up" data-aos-delay="200" data-category="api">
+                    <div class="project-card">
+                        <img src="https://via.placeholder.com/600x400?text=API+System" alt="API System" class="project-img">
+                        <div class="project-body">
+                            <h3 class="project-title">API-based System</h3>
+                            <p class="project-desc">
+                                RESTful API with CRUD operations and JWT authentication.
+                                I designed the API architecture, implemented security
+                                measures, and created comprehensive documentation.
+                            </p>
+                            <div class="tech-stack">
+                                <span class="tech-badge">Laravel</span>
+                                <span class="tech-badge">REST API</span>
+                                <span class="tech-badge">JWT</span>
+                                <span class="tech-badge">Postman</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn btn-github project-btn">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                                <a href="#" class="btn btn-demo project-btn">
+                                    <i class="fas fa-external-link-alt"></i> API Docs
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="col-lg-4 col-md-6 project-item" data-aos="fade-up" data-category="admin">
+                    <div class="project-card">
+                        <img src="https://via.placeholder.com/600x400?text=Admin+Panel" alt="Custom Admin Panel" class="project-img">
+                        <div class="project-body">
+                            <h3 class="project-title">Custom Admin Panel</h3>
+                            <p class="project-desc">
+                                Tailored admin dashboard for a client's business operations.
+                                I created custom modules for data visualization, reporting,
+                                and user management with role-based permissions.
+                            </p>
+                            <div class="tech-stack">
+                                <span class="tech-badge">Laravel</span>
+                                <span class="tech-badge">Vue.js</span>
+                                <span class="tech-badge">Charts.js</span>
+                                <span class="tech-badge">Tailwind CSS</span>
+                            </div>
+                            <div class="project-links">
+                                <button class="btn btn-disabled project-btn" disabled>
+                                    <i class="fas fa-lock"></i> Private
+                                </button>
+                                <a href="#" class="btn btn-demo project-btn">
+                                    <i class="fas fa-external-link-alt"></i> Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -989,6 +1124,47 @@
             quoteForm.reset();
             quotationModal.style.display = 'none';
             document.body.style.overflow = 'auto';
+        });
+    </script>
+
+    <script>
+        // Enhanced filter functionality with smooth animations
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const projectItems = document.querySelectorAll('.project-item');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Update active button
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+
+                    const filterValue = this.getAttribute('data-filter');
+
+                    // First fade out all projects
+                    projectItems.forEach(item => {
+                        item.classList.add('hide');
+                        item.classList.remove('show');
+                    });
+
+                    // After fade out completes, filter and fade in matching projects
+                    setTimeout(() => {
+                        projectItems.forEach(item => {
+                            const categories = item.getAttribute('data-category').split(' ');
+
+                            if (filterValue === 'all' || categories.includes(filterValue)) {
+                                item.style.display = 'block';
+                                setTimeout(() => {
+                                    item.classList.remove('hide');
+                                    item.classList.add('show');
+                                }, 20);
+                            } else {
+                                item.style.display = 'none';
+                            }
+                        });
+                    }, 300); // Match this with the CSS transition duration
+                });
+            });
         });
     </script>
 </body>
