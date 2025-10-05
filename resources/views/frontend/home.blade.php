@@ -147,19 +147,19 @@
 
                 <!-- Social Icons -->
                 <div class="social-icons mt-4">
-                    <a href="#" style="text-decoration: none;" class="social-icon text-white" aria-label="Facebook">
+                    <a href="https://www.facebook.com/share/1G6PywpoBf/" style="text-decoration: none;" class="social-icon text-white" aria-label="Facebook">
                         <i class="fab fa-facebook-f"></i>
                     </a>
-                    <a href="#" style="text-decoration: none;" class="social-icon text-white" aria-label="Twitter">
+                    {{-- <a href="#" style="text-decoration: none;" class="social-icon text-white" aria-label="Twitter">
                         <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="#" style="text-decoration: none;" class="social-icon text-white" aria-label="LinkedIn">
+                    </a> --}}
+                    <a href="https://www.linkedin.com/in/ashuraj-srivastav/" style="text-decoration: none;" class="social-icon text-white" aria-label="LinkedIn">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
-                    <a href="#" style="text-decoration: none;" class="social-icon text-white" aria-label="GitHub">
+                    <a href="https://github.com/AshurajSrivastav01" style="text-decoration: none;" class="social-icon text-white" aria-label="GitHub">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a href="#" style="text-decoration: none;" class="social-icon text-white" aria-label="Instagram">
+                    <a href="https://www.instagram.com/ashuraj_srivastav_/" style="text-decoration: none;" class="social-icon text-white" aria-label="Instagram">
                         <i class="fab fa-instagram"></i>
                     </a>
                 </div>
@@ -405,7 +405,7 @@
         </div>
     </section>
 
-        <!-- Projects Section -->
+    <!-- Projects Section -->
     <section class="projects-section" id="projects">
         <div class="container">
             <h2 class="section-title" data-aos="fade-up">My Projects</h2>
@@ -911,7 +911,7 @@
                             </div>
                             <div>
                                 <div class="contact-label">LinkedIn</div>
-                                <a href="https://linkedin.com/in/ashuraj" class="contact-value" target="_blank">linkedin.com/in/ashuraj</a>
+                                <a href="https://www.linkedin.com/in/ashuraj-srivastav/" class="contact-value" target="_blank">linkedin.com/in/ashuraj-srivastav</a>
                             </div>
                         </div>
 
@@ -921,11 +921,21 @@
                             </div>
                             <div>
                                 <div class="contact-label">GitHub</div>
-                                <a href="https://github.com/ashuraj" class="contact-value" target="_blank">github.com/ashuraj</a>
+                                <a href="https://github.com/AshurajSrivastav01" class="contact-value" target="_blank">github.com/AshurajSrivastav01</a>
                             </div>
                         </div>
 
-                        <div class="social-links">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fab fa-instagram"></i>
+                            </div>
+                            <div>
+                                <div class="contact-label">Instagram</div>
+                                <a href="https://www.instagram.com/ashuraj_srivastav_/" class="contact-value" target="_blank">instagram.com/ashuraj_srivastav_</a>
+                            </div>
+                        </div>
+
+                        {{-- <div class="social-links">
                             <a href="https://linkedin.com/in/ashuraj" style="text-decoration: none;" class="social-link" target="_blank">
                                 <i class="fab fa-linkedin-in"></i>
                             </a>
@@ -938,7 +948,7 @@
                             <a href="mailto:info@ashurajsrivastav.me" style="text-decoration: none;" class="social-link">
                                 <i class="fas fa-envelope"></i>
                             </a>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
 
