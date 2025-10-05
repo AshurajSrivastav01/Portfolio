@@ -98,6 +98,7 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                         <li class="nav-item">
+                            {{-- <a class="nav-link" href="#" aria-current="page">Home</a> --}}
                             <a class="nav-link active" href="#" aria-current="page">Home</a>
                         </li>
                         <li class="nav-item">
