@@ -1,0 +1,2113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ashuraj Srivastav · Software Engineer</title>
+    <!-- Bootstrap 5.3 + Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <!-- Google Font (Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* ----- GLOBAL PALETTE (exact) ----- */
+      :root {
+        --bg: #f8fafc;
+        --text-primary: #111827;
+        --text-secondary: #6b7280;
+        --btn-primary: #2563eb;
+        --btn-hover: #1d4ed8;
+        --accent-laravel: #ff2d20;
+        --border-light: #e5e7eb;
+        --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.03);
+        --radius-btn: 12px;
+        --radius-card: 20px;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family:
+          "Inter",
+          -apple-system,
+          BlinkMacSystemFont,
+          sans-serif;
+        background: var(--bg);
+        color: var(--text-primary);
+        min-height: 100vh;
+        padding-top: 72px;
+        scroll-behavior: smooth;
+      }
+
+      /* ----- NAVBAR (same as previous) ----- */
+      .navbar-wrapper {
+        max-width: 1320px;
+        margin: 0 auto;
+        padding: 0 24px;
+        width: 100%;
+      }
+      .premium-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1050;
+        height: 72px;
+        background: transparent;
+        transition:
+          background 0.25s ease,
+          backdrop-filter 0.25s ease,
+          box-shadow 0.25s ease;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid transparent;
+      }
+      .premium-nav.scrolled {
+        background: rgba(248, 250, 252, 0.85);
+        backdrop-filter: blur(12px) saturate(180%);
+        border-bottom: 1px solid var(--border-light);
+        box-shadow: var(--shadow-soft);
+      }
+      .nav-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 72px;
+      }
+      .logo-link {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        text-decoration: none;
+        color: var(--text-primary);
+        font-weight: 600;
+        font-size: 1.2rem;
+        letter-spacing: -0.02em;
+        transition: opacity 0.2s;
+      }
+      .logo-link:hover {
+        opacity: 0.8;
+      }
+      .logo-mark {
+        background: var(--text-primary);
+        color: var(--bg);
+        font-weight: 700;
+        font-size: 1rem;
+        padding: 4px 8px;
+        border-radius: 8px;
+        display: inline-block;
+        line-height: 1.2;
+        letter-spacing: 0.3px;
+      }
+      .logo-text {
+        color: var(--text-primary);
+        font-weight: 600;
+      }
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      .nav-links .nav-item {
+        position: relative;
+        padding: 0;
+      }
+      .nav-links .nav-link {
+        color: var(--text-primary);
+        font-weight: 500;
+        font-size: 0.95rem;
+        padding: 6px 0;
+        text-decoration: none;
+        transition: color 0.2s;
+        position: relative;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+      }
+      .nav-links .nav-link:hover {
+        color: var(--accent-laravel);
+      }
+      .nav-links .nav-link::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+        width: 0%;
+        height: 2.5px;
+        background: var(--accent-laravel);
+        transition: width 0.25s cubic-bezier(0.2, 0.9, 0.3, 1);
+        border-radius: 4px;
+      }
+      .nav-links .nav-link:hover::after {
+        width: 100%;
+      }
+      .nav-links .nav-link.active {
+        color: var(--text-primary);
+      }
+      .nav-links .nav-link.active::after {
+        width: 100%;
+        background: var(--accent-laravel);
+        box-shadow: 0 0 6px rgba(255, 45, 32, 0.25);
+      }
+      .btn-hire {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--btn-primary);
+        color: #ffffff;
+        border: none;
+        padding: 0.5rem 1.4rem 0.5rem 1.6rem;
+        border-radius: var(--radius-btn);
+        font-weight: 600;
+        font-size: 0.95rem;
+        transition: all 0.25s ease;
+        text-decoration: none;
+        box-shadow: 0 2px 6px rgba(37, 99, 235, 0.08);
+        line-height: 1.4;
+      }
+      .btn-hire:hover {
+        background: var(--btn-hover);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(37, 99, 235, 0.15);
+        color: #ffffff;
+      }
+      .btn-hire i {
+        font-size: 1.1rem;
+        transition: transform 0.2s ease;
+      }
+      .btn-hire:hover i {
+        transform: translateX(3px);
+      }
+      .hamburger {
+        display: none;
+        background: transparent;
+        border: none;
+        font-size: 1.8rem;
+        line-height: 1;
+        color: var(--text-primary);
+        padding: 0 4px;
+        cursor: pointer;
+        transition: color 0.2s;
+      }
+      .hamburger:hover {
+        color: var(--accent-laravel);
+      }
+      /* mobile overlay */
+      .mobile-menu-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(15, 23, 42, 0.2);
+        backdrop-filter: blur(4px);
+        z-index: 1060;
+        visibility: hidden;
+        opacity: 0;
+        transition:
+          opacity 0.25s ease,
+          visibility 0.25s ease;
+      }
+      .mobile-menu-overlay.open {
+        visibility: visible;
+        opacity: 1;
+      }
+      .mobile-menu-panel {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 300px;
+        max-width: 80vw;
+        height: 100%;
+        background: var(--bg);
+        box-shadow: -8px 0 30px rgba(0, 0, 0, 0.04);
+        padding: 2rem 2rem 2.5rem;
+        transform: translateX(100%);
+        transition: transform 0.3s cubic-bezier(0.2, 0.9, 0.3, 1);
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
+        border-left: 1px solid var(--border-light);
+      }
+      .mobile-menu-overlay.open .mobile-menu-panel {
+        transform: translateX(0);
+      }
+      .mobile-menu-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2.5rem;
+      }
+      .mobile-close {
+        background: transparent;
+        border: none;
+        font-size: 2rem;
+        line-height: 1;
+        color: var(--text-primary);
+        padding: 0 4px;
+        cursor: pointer;
+        transition: color 0.2s;
+      }
+      .mobile-close:hover {
+        color: var(--accent-laravel);
+      }
+      .mobile-nav-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+      }
+      .mobile-nav-list .nav-link {
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: var(--text-primary);
+        text-decoration: none;
+        padding: 8px 0;
+        border-bottom: 1px solid transparent;
+        transition:
+          color 0.2s,
+          border-color 0.2s;
+        display: inline-block;
+        width: fit-content;
+      }
+      .mobile-nav-list .nav-link:hover {
+        color: var(--accent-laravel);
+        border-bottom: 1px solid var(--accent-laravel);
+      }
+      .mobile-nav-list .nav-link.active {
+        color: var(--accent-laravel);
+        border-bottom: 1px solid var(--accent-laravel);
+      }
+      .mobile-cta {
+        margin-top: 2.5rem;
+      }
+      .mobile-cta .btn-hire {
+        width: fit-content;
+      }
+      @media (max-width: 991px) {
+        .nav-links {
+          display: none;
+        }
+        .hamburger {
+          display: block;
+        }
+        .nav-cta {
+          display: none;
+        }
+        .mobile-cta .btn-hire {
+          display: inline-flex;
+        }
+      }
+      @media (min-width: 992px) {
+        .mobile-cta .btn-hire {
+          display: none;
+        }
+        .nav-cta {
+          display: block;
+        }
+      }
+
+      /* ----- SECTION SHARED ----- */
+      .section-padding {
+        padding: 80px 0;
+      }
+      .section-title {
+        font-weight: 700;
+        font-size: 2.4rem;
+        letter-spacing: -0.02em;
+        color: var(--text-primary);
+        margin-bottom: 0.75rem;
+      }
+      .section-subtitle {
+        color: var(--text-secondary);
+        font-size: 1.1rem;
+        max-width: 69%;
+        margin: 0 auto 2.5rem;
+      }
+      .accent-line {
+        width: 60px;
+        height: 4px;
+        background: var(--accent-laravel);
+        border-radius: 4px;
+        margin: 0 auto 1.5rem;
+      }
+
+      /* ----- HERO (two-column) ----- */
+      .hero-wrapper {
+        max-width: 1320px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+      .hero-card {
+        padding: 1.8rem 0.5rem;
+      }
+      .badge-freelance {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(255, 45, 32, 0.06);
+        border: 1px solid rgba(255, 45, 32, 0.1);
+        padding: 0.5rem 1.2rem 0.5rem 1rem;
+        border-radius: 100px;
+        font-weight: 500;
+        font-size: 0.85rem;
+        color: var(--text-primary);
+        margin-bottom: 1.8rem;
+      }
+
+      #skills div div,
+      #projects div div,
+      #contact div div {
+        .badge-freelance,
+        h2,
+        .skill-tag,
+        .section-subtitle {
+          color: var(--bg);
+        }
+      }
+
+      .contact-item div {
+        color: var(--bg);
+      }
+
+      .badge-freelance i {
+        font-size: 1.1rem;
+        color: var(--accent-laravel);
+      }
+      .main-heading {
+        font-weight: 700;
+        font-size: 3.2rem;
+        line-height: 1.15;
+        letter-spacing: -0.02em;
+        color: var(--text-primary);
+        margin-bottom: 1.2rem;
+      }
+      .main-heading span {
+        color: var(--accent-laravel);
+        border-bottom: 3px solid rgba(255, 45, 32, 0.15);
+        padding-bottom: 2px;
+      }
+      .desc-text {
+        font-size: 1.12rem;
+        line-height: 1.6;
+        color: var(--text-secondary);
+        max-width: 480px;
+        margin-bottom: 2rem;
+      }
+      .cta-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-bottom: 2.2rem;
+      }
+      .btn-premium {
+        border-radius: 60px;
+        padding: 0.7rem 2rem;
+        font-weight: 600;
+        font-size: 0.95rem;
+        transition: all 0.2s ease;
+        border: 1px solid transparent;
+      }
+      .btn-primary-custom {
+        background: var(--accent-laravel);
+        color: white;
+        border: 1px solid var(--accent-laravel);
+      }
+      .btn-primary-custom:hover {
+        background: #d92015;
+        transform: translateY(-3px);
+        box-shadow: 0 12px 24px -8px rgba(255, 45, 32, 0.25);
+      }
+      .btn-outline-custom {
+        background: transparent;
+        color: var(--text-primary);
+        border: 1px solid var(--border-light);
+      }
+      .btn-outline-custom:hover {
+        background: #eef2f7;
+        border-color: var(--text-primary);
+        transform: translateY(-3px);
+      }
+      .social-icons {
+        display: flex;
+        gap: 1.4rem;
+        font-size: 1.6rem;
+        color: var(--text-primary);
+        margin-bottom: 2rem;
+      }
+      .social-icons a {
+        color: var(--text-primary);
+        transition: 0.2s ease;
+        line-height: 1;
+      }
+      .social-icons a:hover {
+        color: var(--accent-laravel);
+        transform: translateY(-4px);
+      }
+      .trust-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.9rem;
+        margin-top: 0.8rem;
+      }
+      .trust-card {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(2px);
+        border: 1px solid rgba(255, 255, 255, 0.8);
+        box-shadow: 0 10px 20px -12px rgba(0, 0, 0, 0.06);
+        padding: 0.65rem 1.4rem;
+        border-radius: 60px;
+        font-weight: 500;
+        font-size: 0.9rem;
+        color: var(--text-primary);
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .trust-card i {
+        font-size: 1.1rem;
+        color: var(--accent-laravel);
+      }
+      .profile-card {
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(4px);
+        border-radius: 32px;
+        padding: 1.2rem 1.2rem 0.8rem 1.2rem;
+        box-shadow: 0 30px 50px -20px rgba(15, 23, 42, 0.08);
+        width: 100%;
+        max-width: 380px;
+        transition: all 0.25s ease;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+      }
+      .profile-card:hover {
+        transform: translateY(-6px);
+      }
+      .profile-img {
+        width: 100%;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        border-radius: 24px;
+        background: #e2e8f0;
+        display: block;
+      }
+      .floating-badge {
+        position: absolute;
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(6px);
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        box-shadow: 0 10px 18px -12px rgba(0, 0, 0, 0.06);
+        padding: 0.5rem 1rem;
+        border-radius: 60px;
+        font-weight: 500;
+        font-size: 0.8rem;
+        color: #111827;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        white-space: nowrap;
+        pointer-events: none;
+      }
+      .floating-badge i {
+        font-size: 1rem;
+        opacity: 0.8;
+        color: var(--accent-laravel);
+      }
+      .badge-1 {
+        top: -2%;
+        left: -6%;
+      }
+      .badge-2 {
+        top: 25%;
+        right: -12%;
+      }
+      .badge-3 {
+        bottom: 12%;
+        left: -10%;
+      }
+      .badge-4 {
+        bottom: -2%;
+        right: -5%;
+      }
+      .badge-5 {
+        top: 55%;
+        left: -15%;
+      }
+      .badge-6 {
+        top: 8%;
+        right: -8%;
+      }
+
+      /* ----- ABOUT ----- */
+      .about-card {
+        background: #ffffff;
+        border-radius: var(--radius-card);
+        padding: 2.5rem 2rem;
+        box-shadow: var(--shadow-soft);
+        border: 1px solid var(--border-light);
+        height: 100%;
+      }
+
+      /* ----- SKILLS / SERVICES / PROJECTS / EXPERIENCE / CONTACT ----- */
+      .skill-tag {
+        background: #ffffff;
+        border: 1px solid var(--border-light);
+        border-radius: 60px;
+        padding: 0.5rem 1.5rem;
+        font-weight: 500;
+        color: var(--text-primary);
+        transition: 0.2s;
+        display: inline-block;
+      }
+      .skill-tag:hover {
+        border-color: var(--accent-laravel);
+        color: var(--accent-laravel);
+      }
+      .service-card,
+      .project-card,
+      .exp-card {
+        background: #ffffff;
+        border-radius: var(--radius-card);
+        padding: 2rem 1.5rem;
+        border: 1px solid var(--border-light);
+        transition: 0.2s ease;
+        height: 100%;
+      }
+      .service-card:hover,
+      .project-card:hover,
+      .exp-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 28px -8px rgba(0, 0, 0, 0.04);
+        border-color: rgba(255, 45, 32, 0.15);
+      }
+
+      .project-card h5 {
+        color: var(--border-light);
+      }
+
+      .service-icon {
+        font-size: 2.4rem;
+        color: var(--accent-laravel);
+        margin-bottom: 1rem;
+      }
+      .project-img {
+        border-radius: 12px;
+        background: #e2e8f0;
+        width: 100%;
+        aspect-ratio: 16/9;
+        object-fit: cover;
+        margin-bottom: 1.2rem;
+      }
+
+      /* contact */
+      .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem 0;
+        border-bottom: 1px solid var(--border-light);
+      }
+      .contact-item:last-child {
+        border-bottom: none;
+      }
+      .contact-item i {
+        font-size: 1.6rem;
+        color: var(--accent-laravel);
+        width: 2.4rem;
+      }
+
+      /* footer */
+      .footer-note {
+        border-top: 1px solid var(--border-light);
+        padding: 2rem 0;
+        color: var(--text-secondary);
+        font-size: 0.95rem;
+      }
+
+      /* ====== SKILLS SECTION – GLASSMORPHISM CARDS (WHITE BACKGROUND) ====== */
+
+      /* Background & spacing */
+      .skills-section-white {
+        background: #ffffff; /* pure white */
+        padding: 80px 0;
+        font-family:
+          "Inter",
+          -apple-system,
+          BlinkMacSystemFont,
+          sans-serif;
+      }
+
+      .skills-container {
+        max-width: 1320px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+
+      /* Header */
+      .skills-header {
+        text-align: center;
+        margin-bottom: 2.5rem;
+      }
+
+      .skills-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(255, 45, 32, 0.06);
+        border: 1px solid rgba(255, 45, 32, 0.1);
+        padding: 0.5rem 1.2rem 0.5rem 1rem;
+        border-radius: 100px;
+        font-weight: 500;
+        font-size: 0.85rem;
+        color: #111827;
+        margin-bottom: 1rem;
+      }
+      .skills-badge i {
+        font-size: 1.1rem;
+        color: #ff2d20;
+      }
+
+      .skills-title {
+        font-weight: 700;
+        font-size: 2.4rem;
+        letter-spacing: -0.02em;
+        color: #111827;
+        margin-bottom: 0.75rem;
+      }
+
+      .skills-accent-line {
+        width: 60px;
+        height: 4px;
+        background: #ff2d20;
+        border-radius: 4px;
+        margin: 0 auto 1.5rem;
+      }
+
+      .skills-subtitle {
+        color: #6b7280;
+        font-size: 1.1rem;
+        max-width: 700px;
+        margin: 0 auto;
+      }
+
+      /* Grid layout */
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+      }
+
+      /* Glassmorphism Card */
+      .skill-glass-card {
+        background: #f8f9fa; /* Dark navy */
+        backdrop-filter: blur(8px);
+        border-radius: 20px;
+        padding: 1.8rem 1.5rem;
+        border: 1px solid #111827;
+        box-shadow: 0 12px 30px -12px rgba(15, 23, 42, 0.25);
+        transition: all 0.3s cubic-bezier(0.2, 0.9, 0.3, 1);
+        height: 100%;
+        color: #f8fafc;
+      }
+
+      .skill-glass-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 20px 40px -12px rgba(15, 23, 42, 0.35);
+        border-color: rgba(255, 255, 255, 0.15);
+      }
+
+      /* Card title */
+      .skill-glass-card .card-title {
+        font-weight: 700;
+        font-size: 1.15rem;
+        margin-bottom: 1.2rem;
+        color: #111827;
+        letter-spacing: -0.01em;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .skill-glass-card .card-title i {
+        color: #ff2d20;
+        font-size: 1.5rem;
+      }
+
+      /* List items */
+      .skill-glass-card ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .skill-glass-card ul li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 0.4rem 0;
+        font-size: 0.95rem;
+        color: #111827;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      }
+      .skill-glass-card ul li:last-child {
+        border-bottom: none;
+      }
+
+      .skill-glass-card ul li i.bi-check-lg {
+        color: #ff2d20;
+        font-size: 1.1rem;
+        flex-shrink: 0;
+      }
+
+      .skill-glass-card ul li i.tech-icon {
+        color: #ff2d20;
+        font-size: 1rem;
+        width: 1.4rem;
+        text-align: center;
+        flex-shrink: 0;
+      }
+
+      .project-description {
+        color: #111827;
+      }
+      .project-tech span {
+        color: #ff2d20;
+      }
+      .project-features li {
+        color: #111827;
+      }
+      .project-content {
+        padding: 22px;
+      }
+
+      .project-category {
+        display: inline-block;
+        padding: 6px 14px;
+        border-radius: 30px;
+        background: rgba(249, 65, 68, 0.12);
+        color: var(--accent-laravel);
+        font-size: 0.8rem;
+        font-weight: 600;
+      }
+
+      .project-description {
+        margin: 16px 0;
+        line-height: 1.7;
+      }
+
+      .project-tech {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 18px;
+      }
+
+      .project-tech span {
+        padding: 5px 12px;
+        border-radius: 30px;
+        background: rgb(254 232 232);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        font-size: 0.78rem;
+      }
+
+      .project-features {
+        padding-left: 18px;
+        color: var(--text-secondary);
+        margin-bottom: 20px;
+      }
+
+      .project-features li {
+        margin-bottom: 6px;
+      }
+
+      .project-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--accent-laravel);
+        font-weight: 600;
+        text-decoration: none;
+      }
+
+      .project-btn:hover {
+        color: #fff;
+      }
+
+      /* Responsive grid */
+      @media (max-width: 1199px) {
+        .skills-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 576px) {
+        .skills-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* responsive adjustments */
+      @media (max-width: 991px) {
+        .main-heading {
+          font-size: 2.8rem;
+        }
+        .floating-badge {
+          font-size: 0.7rem;
+          padding: 0.3rem 0.8rem;
+        }
+        .badge-1 {
+          top: -4%;
+          left: -2%;
+        }
+        .badge-2 {
+          top: 20%;
+          right: -6%;
+        }
+        .badge-3 {
+          bottom: 8%;
+          left: -6%;
+        }
+        .badge-4 {
+          bottom: -4%;
+          right: -2%;
+        }
+        .badge-5 {
+          top: 50%;
+          left: -10%;
+        }
+        .badge-6 {
+          top: 4%;
+          right: -4%;
+        }
+      }
+      @media (max-width: 768px) {
+        .main-heading {
+          font-size: 2.4rem;
+        }
+        .desc-text {
+          font-size: 1rem;
+          max-width: 100%;
+        }
+        .trust-grid {
+          gap: 0.6rem;
+        }
+        .trust-card {
+          font-size: 0.8rem;
+          padding: 0.4rem 1rem;
+        }
+        .profile-card {
+          max-width: 300px;
+          margin: 2rem auto 0;
+        }
+        .floating-badge {
+          font-size: 0.65rem;
+          padding: 0.2rem 0.7rem;
+        }
+        .social-icons {
+          font-size: 1.4rem;
+          gap: 1rem;
+        }
+      }
+      @media (max-width: 480px) {
+        .main-heading {
+          font-size: 2rem;
+        }
+        .profile-card {
+          max-width: 240px;
+        }
+        .badge-freelance {
+          font-size: 0.75rem;
+          padding: 0.3rem 1rem;
+        }
+      }
+
+      /* focus */
+      .nav-link:focus-visible,
+      .logo-link:focus-visible,
+      .hamburger:focus-visible,
+      .mobile-close:focus-visible,
+      .btn-hire:focus-visible,
+      .btn:focus-visible {
+        outline: 3px solid var(--btn-primary);
+        outline-offset: 3px;
+        border-radius: 4px;
+      }
+
+      /* animations */
+      .fade-slide-up {
+        animation: fadeSlideUp 0.7s cubic-bezier(0.2, 0.9, 0.3, 1) both;
+      }
+      @keyframes fadeSlideUp {
+        0% {
+          opacity: 0;
+          transform: translateY(24px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .floating-badge {
+        animation: floatSoft 6s infinite alternate ease-in-out;
+      }
+      .floating-badge:nth-child(2) {
+        animation-delay: 0.6s;
+      }
+      .floating-badge:nth-child(3) {
+        animation-delay: 1.2s;
+      }
+      .floating-badge:nth-child(4) {
+        animation-delay: 0.2s;
+      }
+      .floating-badge:nth-child(5) {
+        animation-delay: 1.8s;
+      }
+      .floating-badge:nth-child(6) {
+        animation-delay: 0.9s;
+      }
+      @keyframes floatSoft {
+        0% {
+          transform: translate(0px, 0px) scale(1);
+        }
+        100% {
+          transform: translate(6px, -8px) scale(1.02);
+        }
+      }
+
+      /* dark mode */
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #0f172a;
+          --text-primary: #f8fafc;
+          --text-secondary: #cbd5e1;
+          --btn-primary: #2563eb;
+          --btn-hover: #1d4ed8;
+          --accent-laravel: #ff2d20;
+          --border-light: #1e293b;
+          --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+        .premium-nav.scrolled {
+          background: rgba(15, 23, 42, 0.85);
+          border-bottom: 1px solid var(--border-light);
+        }
+        .about-card,
+        .service-card,
+        .project-card,
+        .exp-card {
+          background: rgba(255, 255, 255, 0.04);
+          backdrop-filter: blur(4px);
+          border-color: var(--border-light);
+        }
+        .trust-card,
+        .profile-card,
+        .skill-tag {
+          background: rgba(255, 255, 255, 0.05);
+          backdrop-filter: blur(4px);
+          border-color: var(--border-light);
+        }
+        .btn-outline-custom {
+          border-color: var(--border-light);
+          color: var(--text-primary);
+        }
+        .btn-outline-custom:hover {
+          background: rgba(255, 255, 255, 0.05);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ====== NAVBAR ====== -->
+    <nav class="premium-nav" id="premiumNav" aria-label="Main navigation">
+      <div class="navbar-wrapper">
+        <div class="nav-inner">
+          <a href="#" class="logo-link" aria-label="Ashuraj homepage">
+            <span class="logo-mark">&lt;AS/&gt;</span>
+            <span class="logo-text">Ashuraj</span>
+          </a>
+          <ul class="nav-links" id="desktopNav">
+            <li class="nav-item">
+              <a href="#about" class="nav-link" data-nav>About</a>
+            </li>
+            <li class="nav-item">
+              <a href="#skills" class="nav-link" data-nav>Skills</a>
+            </li>
+            <li class="nav-item">
+              <a href="#services" class="nav-link" data-nav>Services</a>
+            </li>
+            <li class="nav-item">
+              <a href="#projects" class="nav-link" data-nav>Projects</a>
+            </li>
+            <li class="nav-item">
+              <a href="#experience" class="nav-link" data-nav>Experience</a>
+            </li>
+            <li class="nav-item">
+              <a href="#contact" class="nav-link" data-nav>Contact</a>
+            </li>
+          </ul>
+          <div class="d-flex align-items-center gap-3">
+            <div class="nav-cta">
+              <a href="#contact" class="btn-hire">
+                Hire Me
+                <i class="bi bi-arrow-right-short"></i>
+              </a>
+            </div>
+            <button
+              class="hamburger"
+              id="hamburgerBtn"
+              aria-label="Toggle navigation menu"
+              aria-expanded="false"
+            >
+              <i class="bi bi-list"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ====== MOBILE OVERLAY ====== -->
+    <div
+      class="mobile-menu-overlay"
+      id="mobileOverlay"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Mobile navigation"
+    >
+      <div class="mobile-menu-panel">
+        <div class="mobile-menu-header">
+          <span class="logo-link" style="pointer-events: none">
+            <span class="logo-mark">&lt;AS/&gt;</span>
+            <span class="logo-text">Ashuraj</span>
+          </span>
+          <button
+            class="mobile-close"
+            id="closeMenuBtn"
+            aria-label="Close navigation menu"
+          >
+            <i class="bi bi-x-lg"></i>
+          </button>
+        </div>
+        <ul class="mobile-nav-list">
+          <li><a href="#about" class="nav-link" data-nav>About</a></li>
+          <li><a href="#skills" class="nav-link" data-nav>Skills</a></li>
+          <li><a href="#services" class="nav-link" data-nav>Services</a></li>
+          <li><a href="#projects" class="nav-link" data-nav>Projects</a></li>
+          <li>
+            <a href="#experience" class="nav-link" data-nav>Experience</a>
+          </li>
+          <li><a href="#contact" class="nav-link" data-nav>Contact</a></li>
+        </ul>
+        <div class="mobile-cta">
+          <a href="#contact" class="btn-hire">
+            Hire Me
+            <i class="bi bi-arrow-right-short"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ====== HERO ====== -->
+    <section class="hero-wrapper section-padding" id="home">
+      <div class="row align-items-center g-4 hero-card">
+        <div class="col-lg-6 col-xl-6 fade-slide-up">
+          <div class="badge-freelance">
+            <i class="bi bi-circle-fill" style="font-size: 0.6rem"></i>
+            Available for Freelance
+          </div>
+          <h1 class="main-heading">
+            Building Scalable <span>Laravel</span> &<br />
+            <span>Moodle</span> Solutions for <span>Businesses</span> &
+            <span>Educational</span> Platforms
+          </h1>
+          <p class="desc-text">
+            I help startups, educational institutions, and businesses build
+            scalable Laravel applications, custom Moodle LMS platforms, REST
+            APIs, and backend systems that are secure, maintainable, and built
+            for growth.
+          </p>
+          <div class="cta-group">
+            <a href="#projects" class="btn btn-premium btn-primary-custom"
+              >Explore My Work</a
+            >
+            <a href="#contact" class="btn btn-premium btn-outline-custom"
+              >Let's Talk</a
+            >
+            <a href="#contact" class="btn btn-premium btn-primary-custom"
+              ><i class="bi bi-file-fill"></i> Download Resume</a
+            >
+          </div>
+          <div class="social-icons">
+            <a href="#" aria-label="GitHub"><i class="bi bi-github"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="#" aria-label="Email"
+              ><i class="bi bi-envelope-fill"></i
+            ></a>
+          </div>
+          <div class="trust-grid">
+            <span class="trust-card"
+              ><i class="bi bi-briefcase-fill"></i> <strong>3+</strong> Years
+              Experience</span
+            >
+            <span class="trust-card"
+              ><i class="bi bi-diagram-3-fill"></i> <strong>10+</strong> Client
+              Projects</span
+            >
+            <span class="trust-card"
+              ><i class="bi bi-code-square"></i>Laravel + Moodle
+              Specialist</span
+            >
+            <span class="trust-card"
+              ><i class="bi bi-check-circle-fill"></i>Available Worldwide</span
+            >
+          </div>
+        </div>
+        <div
+          class="col-lg-6 col-xl-6 d-flex justify-content-center justify-content-lg-end mt-3 mt-lg-0"
+        >
+          <div
+            class="photo-wrapper"
+            style="position: relative; width: 100%; max-width: 420px"
+          >
+            <div
+              class="profile-card fade-slide-up"
+              style="animation-delay: 0.1s"
+            >
+              <img
+                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 400 400'%3E%3Crect width='400' height='400' fill='%23e2e8f0'/%3E%3Ccircle cx='200' cy='160' r='60' fill='%230F172A'/%3E%3Ccircle cx='200' cy='260' r='90' fill='%233B82F6'/%3E%3C/svg%3E"
+                alt="Ashuraj Srivastav"
+                class="profile-img"
+                loading="eager"
+              />
+            </div>
+            <span class="floating-badge badge-1"
+              ><i class="bi bi-hexagon-fill"></i> Laravel</span
+            >
+            <span class="floating-badge badge-2"
+              ><i class="bi bi-filetype-php"></i> PHP</span
+            >
+            <span class="floating-badge badge-5"
+              ><i class="bi bi-database-fill"></i> MySQL</span
+            >
+            <span class="floating-badge badge-4"
+              ><i class="bi bi-diagram-2-fill"></i> REST API</span
+            >
+            <span class="floating-badge badge-3"
+              ><i class="bi bi-bootstrap-fill"></i> PostgreSQL</span
+            >
+            <span class="floating-badge badge-6"
+              ><i class="bi bi-grid-3x3-gap-fill"></i> Moodle</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== ABOUT ====== -->
+    <section class="section-padding" id="about" style="background: var(--bg)">
+      <div class="container">
+        <div class="text-center mb-4">
+          <span
+            class="badge-freelance"
+            style="display: inline-flex; margin-bottom: 0.5rem"
+          >
+            <i class="bi bi-person-lines-fill"></i> About Me
+          </span>
+
+          <h2 class="section-title">
+            Laravel & Moodle Solutions <br />
+            Built for Real Businesses
+          </h2>
+
+          <div class="accent-line"></div>
+
+          <p class="section-subtitle">
+            I'm <strong>Ashuraj Srivastav</strong>, a Full-Stack Web Developer
+            with 3+ years of professional experience specializing in Laravel,
+            Moodle LMS, and backend development. I help businesses and
+            educational organizations build secure web applications, scalable
+            Learning Management Systems, and high-performance REST APIs.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Left Card -->
+
+          <div class="col-lg-7">
+            <div class="about-card">
+              <h4 class="mb-4">Who I Am</h4>
+
+              <p style="color: var(--text-secondary); line-height: 1.9">
+                I'm passionate about building web applications that solve real
+                business problems. Over the past three years, I've worked on
+                custom Laravel applications, Moodle Learning Management Systems,
+                CRM solutions, booking platforms, and RESTful APIs for
+                businesses across different industries.
+              </p>
+
+              <p style="color: var(--text-secondary); line-height: 1.9">
+                My strongest expertise is in Moodle development, where I build
+                custom plugins, LMS features, third-party integrations, and
+                migration tools. Alongside Moodle, I develop scalable Laravel
+                applications with clean architecture, optimized databases, and
+                secure APIs.
+              </p>
+
+              <p style="color: var(--text-secondary); line-height: 1.9">
+                I enjoy turning complex requirements into reliable, maintainable
+                software that helps businesses grow. My goal is always to
+                deliver solutions that are scalable, efficient, and easy to
+                maintain.
+              </p>
+            </div>
+          </div>
+
+          <!-- Right Card -->
+
+          <div class="col-lg-5">
+            <div
+              class="about-card"
+              style="display: flex; flex-direction: column; gap: 1.2rem"
+            >
+              <h4 class="mb-3">Quick Facts</h4>
+
+              <div>
+                <i class="bi bi-geo-alt-fill text-danger me-2"></i>
+                <strong>Location:</strong> New Delhi, India
+              </div>
+
+              <div>
+                <i class="bi bi-globe2 text-danger me-2"></i>
+                <strong>Working With:</strong> International & Indian Clients
+              </div>
+
+              <div>
+                <i class="bi bi-briefcase-fill text-danger me-2"></i>
+                <strong>Experience:</strong> 3+ Years Professional Experience
+              </div>
+
+              <div>
+                <i class="bi bi-check2-circle text-danger me-2"></i>
+                <strong>Projects:</strong> 50+ Professional Projects Delivered
+              </div>
+
+              <div>
+                <i class="bi bi-mortarboard-fill text-danger me-2"></i>
+                <strong>Specialization:</strong> Moodle LMS & Plugin Development
+              </div>
+
+              <div>
+                <i class="bi bi-code-slash text-danger me-2"></i>
+                <strong>Backend:</strong> Laravel, PHP & REST API Development
+              </div>
+
+              <div>
+                <i class="bi bi-database-fill text-danger me-2"></i>
+                <strong>Databases:</strong> MySQL, PostgreSQL & MongoDB
+              </div>
+
+              <div>
+                <i class="bi bi-lightning-charge-fill text-danger me-2"></i>
+                <strong>Focus:</strong> Performance Optimization & Clean
+                Architecture
+              </div>
+
+              <div>
+                <i class="bi bi-patch-check-fill text-danger me-2"></i>
+                <strong>Status:</strong> Available for Freelance & Contract
+                Projects
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== SKILLS SECTION (Glassmorphism Cards – White Background) ====== -->
+    <section class="skills-section-white">
+      <div class="skills-container">
+        <!-- Section Header -->
+        <div class="skills-header">
+          <span class="skills-badge">
+            <i class="bi bi-code-slash"></i> Skills
+          </span>
+          <h2 class="skills-title">Technologies I Work With</h2>
+          <div class="skills-accent-line"></div>
+          <p class="skills-subtitle">
+            The tools and technologies I use every day to build scalable web
+            applications, Learning Management Systems, REST APIs, and business
+            solutions.
+          </p>
+        </div>
+
+        <!-- Cards Grid -->
+        <div class="skills-grid">
+          <!-- Card 1: Backend Development -->
+          <div class="skill-glass-card">
+            <div class="card-title">
+              <i class="bi bi-server"></i> Backend Development
+            </div>
+            <ul>
+              <li>
+                <i class="bi bi-check-lg"></i>
+                <i class="bi bi-hexagon-fill tech-icon"></i> Laravel
+              </li>
+              <li>
+                <i class="bi bi-check-lg"></i>
+                <i class="bi bi-filetype-php tech-icon"></i> PHP
+              </li>
+              <li>
+                <i class="bi bi-check-lg"></i>
+                <i class="bi bi-diagram-2-fill tech-icon"></i> REST APIs
+              </li>
+              <li>
+                <i class="bi bi-check-lg"></i>
+                <i class="bi bi-layers-fill tech-icon"></i> MVC Architecture
+              </li>
+              <li>
+                <i class="bi bi-check-lg"></i>
+                <i class="bi bi-shield-lock-fill tech-icon"></i> Authentication
+              </li>
+              <li>
+                <i class="bi bi-check-lg"></i>
+                <i class="bi bi-people-fill tech-icon"></i> Role Based Access
+                Control
+              </li>
+            </ul>
+          </div>
+
+          <!-- Card 2: Learning Management Systems -->
+          <div class="skill-glass-card">
+            <div class="card-title">
+              <i class="bi bi-mortarboard-fill"></i> Learning Management Systems
+            </div>
+            <ul>
+              <li>
+                <i class="bi bi-check-lg"></i>
+                <i class="bi bi-grid-3x3-gap-fill tech-icon"></i> Moodle
+              </li>
+              <li>
+                <i class="bi bi-check-lg"></i>
+                <i class="bi bi-puzzle-fill tech-icon"></i> Custom Plugin
+                Development
+              </li>
+              <li>
+                <i class="bi bi-check-lg"></i>
+                <i class="bi bi-palette-fill tech-icon"></i> Theme Customization
+              </li>
+              <li>
+                <i class="bi bi-check-lg"></i>
+                <i class="bi bi-arrow-left-right tech-icon"></i> Course
+                Migration
+              </li>
+              <li>
+                <i class="bi bi-check-lg"></i>
+                <i class="bi bi-diagram-3-fill tech-icon"></i> LMS Integration
+              </li>
+            </ul>
+          </div>
+
+          <!-- Card 3: Database -->
+          <div class="skill-glass-card">
+            <div class="card-title">
+              <i class="bi bi-database-fill"></i> Database
+            </div>
+            <ul>
+              <li>
+                <i class="bi bi-check-lg"></i>
+                <i class="bi bi-database tech-icon"></i> MySQL
+              </li>
+              <li>
+                <i class="bi bi-check-lg"></i>
+                <i class="bi bi-database tech-icon"></i> PostgreSQL
+              </li>
+              <li>
+                <i class="bi bi-check-lg"></i>
+                <i class="bi bi-database tech-icon"></i> MongoDB
+              </li>
+              <li>
+                <i class="bi bi-check-lg"></i>
+                <i class="bi bi-graph-up-arrow tech-icon"></i> Query
+                Optimization
+              </li>
+              <li>
+                <i class="bi bi-check-lg"></i>
+                <i class="bi bi-diagram-3-fill tech-icon"></i> Database Design
+              </li>
+              <li>
+                <i class="bi bi-check-lg"></i>
+                <i class="bi bi-graph-up-arrow tech-icon"></i> Performance
+                Tuning
+              </li>
+            </ul>
+          </div>
+
+          <!-- Card 4: Frontend & Development Tools -->
+          <div class="skill-glass-card">
+            <div class="card-title">
+              <i class="bi bi-code-slash"></i>
+              Frontend & Tools
+            </div>
+
+            <ul>
+              <li>
+                <i class="bi bi-check-lg"></i>
+                <i class="bi bi-filetype-html tech-icon"></i>
+                HTML5
+              </li>
+
+              <li>
+                <i class="bi bi-check-lg"></i>
+                <i class="bi bi-filetype-css tech-icon"></i>
+                CSS3
+              </li>
+
+              <li>
+                <i class="bi bi-check-lg"></i>
+                <i class="bi bi-filetype-js tech-icon"></i>
+                JavaScript
+              </li>
+
+              <li>
+                <i class="bi bi-check-lg"></i>
+                <i class="bi bi-bootstrap-fill tech-icon"></i>
+                Bootstrap
+              </li>
+
+              <li>
+                <i class="bi bi-check-lg"></i>
+                <i class="bi bi-git tech-icon"></i>
+                Git & GitHub
+              </li>
+
+              <li>
+                <i class="bi bi-check-lg"></i>
+                <i class="bi bi-tools tech-icon"></i>
+                Postman
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== SERVICES ====== -->
+    <section
+      class="section-padding"
+      id="services"
+      style="background: var(--bg)"
+    >
+      <div class="container">
+        <div class="text-center mb-4">
+          <span
+            class="badge-freelance"
+            style="display: inline-flex; margin-bottom: 0.5rem"
+            ><i class="bi bi-briefcase-fill"></i> Services</span
+          >
+          <h2 class="section-title">Development Services</h2>
+          <p class="section-subtitle">
+            Helping startups, businesses, and educational institutions build
+            secure, scalable, and high-performance web applications tailored to
+            their needs.
+          </p>
+          <div class="accent-line"></div>
+        </div>
+
+        <div class="row g-4">
+          <!-- Moodle LMS -->
+          <div class="col-md-6 col-lg-4">
+            <div class="service-card text-center h-100">
+              <div class="service-icon">
+                <i class="bi bi-mortarboard-fill"></i>
+              </div>
+
+              <h5 class="fw-bold">Moodle LMS Development</h5>
+
+              <p class="service-text">
+                Build custom Moodle Learning Management Systems with plugin
+                development, theme customization, course management, payment
+                integration, reporting, and automation.
+              </p>
+
+              <div class="service-tags">
+                <span>Moodle</span>
+                <span>PHP</span>
+                <span>Plugins</span>
+                <span>LMS</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Laravel -->
+          <div class="col-md-6 col-lg-4">
+            <div class="service-card text-center h-100">
+              <div class="service-icon">
+                <i class="bi bi-layers-fill"></i>
+              </div>
+
+              <h5 class="fw-bold">Custom Laravel Applications</h5>
+
+              <p class="service-text">
+                Develop secure Laravel applications including CRM systems,
+                booking platforms, admin panels, business automation software,
+                and other custom web solutions.
+              </p>
+
+              <div class="service-tags">
+                <span>Laravel</span>
+                <span>PHP</span>
+                <span>MySQL</span>
+                <span>Bootstrap</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- APIs -->
+          <div class="col-md-6 col-lg-4">
+            <div class="service-card text-center h-100">
+              <div class="service-icon">
+                <i class="bi bi-diagram-3-fill"></i>
+              </div>
+
+              <h5 class="fw-bold">REST APIs & Backend Systems</h5>
+
+              <p class="service-text">
+                Design secure REST APIs, integrate third-party services,
+                implement authentication, payment gateways, and build scalable
+                backend architectures.
+              </p>
+
+              <div class="service-tags">
+                <span>REST API</span>
+                <span>JWT</span>
+                <span>OAuth</span>
+                <span>Payments</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- WordPress -->
+          <div class="col-md-6 col-lg-4">
+            <div class="service-card text-center h-100">
+              <div class="service-icon">
+                <i class="bi bi-wordpress"></i>
+              </div>
+
+              <h5 class="fw-bold">WordPress Plugin Development</h5>
+
+              <p class="service-text">
+                Create custom WordPress plugins, extend existing functionality,
+                integrate APIs, and build tailored solutions for business
+                requirements.
+              </p>
+
+              <div class="service-tags">
+                <span>WordPress</span>
+                <span>Plugins</span>
+                <span>WooCommerce</span>
+                <span>PHP</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Migration -->
+          <div class="col-md-6 col-lg-4">
+            <div class="service-card text-center h-100">
+              <div class="service-icon">
+                <i class="bi bi-arrow-left-right"></i>
+              </div>
+
+              <h5 class="fw-bold">LMS Migration & Integration</h5>
+
+              <p class="service-text">
+                Migrate courses, users, and content between LMS platforms while
+                integrating payment gateways, video platforms, and third-party
+                services.
+              </p>
+
+              <div class="service-tags">
+                <span>Moodle</span>
+                <span>Migration</span>
+                <span>API</span>
+                <span>Integration</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Performance -->
+          <div class="col-md-6 col-lg-4">
+            <div class="service-card text-center h-100">
+              <div class="service-icon">
+                <i class="bi bi-speedometer2"></i>
+              </div>
+
+              <h5 class="fw-bold">Application Performance Optimization</h5>
+
+              <p class="service-text">
+                Optimize database queries, improve API response times, increase
+                application performance, and resolve scalability bottlenecks.
+              </p>
+
+              <div class="service-tags">
+                <span>Optimization</span>
+                <span>MySQL</span>
+                <span>Laravel</span>
+                <span>Performance</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== PROJECTS ====== -->
+    <section class="section-padding" id="projects" style="background: #ffffff">
+      <div class="container">
+        <div class="text-center mb-4">
+          <span
+            class="badge-freelance"
+            style="display: inline-flex; margin-bottom: 0.5rem"
+            ><i class="bi bi-folder2-open"></i> Projects</span
+          >
+          <h2 class="section-title">Recent work</h2>
+          <div class="accent-line"></div>
+        </div>
+        <div class="row g-4">
+          <!-- Project 1 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="project-card h-100">
+              <img
+                src="https://img.magnific.com/premium-photo/demo-cubes-form-word-demo_556258-4243.jpg?semt=ais_hybrid&w=740&q=80"
+                class="project-img"
+                alt="Custom Moodle LMS"
+              />
+
+              <div class="project-content">
+                <span class="project-category">Moodle LMS</span>
+
+                <h5 class="fw-bold mt-2">Custom Moodle Learning Platform</h5>
+
+                <p class="project-description">
+                  Developed a scalable Moodle Learning Management System with
+                  custom plugins, theme customization, payment integration, user
+                  management, and REST API development.
+                </p>
+
+                <div class="project-tech">
+                  <span>Moodle</span>
+                  <span>PHP</span>
+                  <span>MySQL</span>
+                  <span>REST API</span>
+                </div>
+
+                <!-- <ul class="project-features">
+                  <li>Custom Plugin Development</li>
+                  <li>Theme Customization</li>
+                  <li>Payment Integration</li>
+                </ul> -->
+
+                <a href="#" class="project-btn">
+                  View Details
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="project-card h-100">
+              <img
+                src="https://img.magnific.com/premium-photo/demo-cubes-form-word-demo_556258-4243.jpg?semt=ais_hybrid&w=740&q=80"
+                class="project-img"
+                alt="Laravel CRM"
+              />
+
+              <div class="project-content">
+                <span class="project-category">Laravel</span>
+
+                <h5 class="fw-bold mt-2">CRM & Business Management System</h5>
+
+                <p class="project-description">
+                  Built a custom CRM application featuring customer management,
+                  lead tracking, role-based access control, reporting
+                  dashboards, and business automation.
+                </p>
+
+                <div class="project-tech">
+                  <span>Laravel</span>
+                  <span>PHP</span>
+                  <span>MySQL</span>
+                  <span>Bootstrap</span>
+                </div>
+
+                <!-- <ul class="project-features">
+                  <li>RBAC Authentication</li>
+                  <li>Reporting Dashboard</li>
+                  <li>REST APIs</li>
+                </ul> -->
+
+                <a href="#" class="project-btn">
+                  View Details
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="project-card h-100">
+              <img
+                src="https://img.magnific.com/premium-photo/demo-cubes-form-word-demo_556258-4243.jpg?semt=ais_hybrid&w=740&q=80"
+                class="project-img"
+                alt="Booking System"
+              />
+
+              <div class="project-content">
+                <span class="project-category">Laravel</span>
+
+                <h5 class="fw-bold mt-2">Appointment & Booking Platform</h5>
+
+                <p class="project-description">
+                  Developed a booking management system with scheduling,
+                  appointment tracking, notifications, admin dashboard, and API
+                  integrations.
+                </p>
+
+                <div class="project-tech">
+                  <span>Laravel</span>
+                  <span>MySQL</span>
+                  <span>REST API</span>
+                  <span>Bootstrap</span>
+                </div>
+
+                <!-- <ul class="project-features">
+                  <li>Booking Engine</li>
+                  <li>Admin Dashboard</li>
+                  <li>Notifications</li>
+                </ul> -->
+
+                <a href="#" class="project-btn">
+                  View Details
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== EXPERIENCE ====== -->
+    <section
+      class="section-padding"
+      id="experience"
+      style="background: var(--bg)"
+    >
+      <div class="container">
+        <div class="text-center mb-4">
+          <span
+            class="badge-freelance"
+            style="display: inline-flex; margin-bottom: 0.5rem"
+            ><i class="bi bi-briefcase-fill"></i> Experience</span
+          >
+          <h2 class="section-title">Professional Journey</h2>
+          <p class="section-subtitle">
+            My growth as a backend developer, building scalable Laravel
+            applications, Moodle LMS solutions, and business systems for clients
+            across different industries.
+          </p>
+          <div class="accent-line"></div>
+        </div>
+        <div class="row g-4">
+          <!-- Current Company -->
+          <div class="col-lg-4">
+            <div class="exp-card h-100">
+              <div
+                class="d-flex justify-content-between align-items-center mb-3"
+              >
+                <div>
+                  <h5 class="fw-bold mb-1">PHP Developer</h5>
+
+                  <div class="text-secondary">Nxtbyts</div>
+                </div>
+
+                <span class="badge-freelance"> Current </span>
+              </div>
+
+              <p class="text-secondary mb-3">
+                <i class="bi bi-calendar3"></i>
+                May 2025 – Present
+              </p>
+
+              <ul class="experience-list">
+                <li>Developing scalable Laravel backend applications.</li>
+
+                <li>Building custom Moodle LMS features and integrations.</li>
+
+                <li>
+                  Improved API response time by nearly 40% through query
+                  optimization.
+                </li>
+
+                <li>Designed secure REST APIs for business applications.</li>
+
+                <li>Optimized MySQL database performance.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Previous Company -->
+
+          <div class="col-lg-4">
+            <div class="exp-card h-100">
+              <div
+                class="d-flex justify-content-between align-items-center mb-3"
+              >
+                <div>
+                  <h5 class="fw-bold mb-1">Full Stack Developer</h5>
+
+                  <div class="text-secondary">Udhhyog</div>
+                </div>
+
+                <span class="badge-freelance"> Full-Time </span>
+              </div>
+
+              <p class="text-secondary mb-3">
+                <i class="bi bi-calendar3"></i>
+                May 2024 – May 2025
+              </p>
+
+              <ul class="experience-list">
+                <li>Developed CRM and business management systems.</li>
+
+                <li>Built booking platforms and custom admin panels.</li>
+
+                <li>Created eCommerce modules and payment integrations.</li>
+
+                <li>Worked on Laravel REST APIs and database design.</li>
+
+                <li>Delivered multiple client projects successfully.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Internship -->
+
+          <div class="col-lg-4">
+            <div class="exp-card h-100">
+              <div
+                class="d-flex justify-content-between align-items-center mb-3"
+              >
+                <div>
+                  <h5 class="fw-bold mb-1">Full Stack Developer Intern</h5>
+
+                  <div class="text-secondary">
+                    Brandshow Consultancy Services
+                  </div>
+                </div>
+
+                <span class="badge-freelance"> Internship </span>
+              </div>
+
+              <p class="text-secondary mb-3">
+                <i class="bi bi-calendar3"></i>
+                Oct 2023 – May 2024
+              </p>
+
+              <ul class="experience-list">
+                <li>Built backend modules using PHP and Laravel.</li>
+
+                <li>Developed REST APIs for client applications.</li>
+
+                <li>Implemented authentication and role management.</li>
+
+                <li>Designed relational databases and SQL queries.</li>
+
+                <li>Collaborated on multiple real-world web projects.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== CONTACT ====== -->
+    <section class="section-padding" id="contact" style="background: #ffffff">
+      <div class="container">
+        <div class="text-center mb-4">
+          <span
+            class="badge-freelance"
+            style="display: inline-flex; margin-bottom: 0.5rem"
+            ><i class="bi bi-envelope-fill"></i> Contact</span
+          >
+          <h2 class="section-title">Let's build something great</h2>
+          <div class="accent-line"></div>
+          <p class="section-subtitle">
+            I'm available for freelance projects, collaborations, or full-time
+            roles.
+          </p>
+        </div>
+        <div class="row g-4 justify-content-center">
+          <div class="col-md-8 col-lg-6">
+            <div class="about-card" style="padding: 2rem">
+              <div class="contact-item">
+                <i class="bi bi-envelope-fill"></i>
+                <div>
+                  <strong>Email</strong><br /><span
+                    style="color: var(--text-secondary)"
+                    >ashuraj@example.com</span
+                  >
+                </div>
+              </div>
+              <div class="contact-item">
+                <i class="bi bi-linkedin"></i>
+                <div>
+                  <strong>LinkedIn</strong><br /><span
+                    style="color: var(--text-secondary)"
+                    >linkedin.com/in/ashuraj</span
+                  >
+                </div>
+              </div>
+              <div class="contact-item">
+                <i class="bi bi-github"></i>
+                <div>
+                  <strong>GitHub</strong><br /><span
+                    style="color: var(--text-secondary)"
+                    >github.com/ashuraj</span
+                  >
+                </div>
+              </div>
+              <div class="mt-4">
+                <a
+                  href="#contact"
+                  class="btn-hire"
+                  style="width: 100%; justify-content: center"
+                >
+                  <i class="bi bi-send-fill"></i> Send a message
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== FOOTER ====== -->
+    <footer class="footer-note text-center">
+      <div class="container">
+        <p class="mb-0">
+          &copy; 2026 Ashuraj Srivastav · Built with
+          <i class="bi bi-heart-fill" style="color: var(--accent-laravel)"></i>
+        </p>
+      </div>
+    </footer>
+
+    <!-- ====== JAVASCRIPT ====== -->
+    <script>
+      (function () {
+        "use strict";
+
+        const nav = document.getElementById("premiumNav");
+        const hamburger = document.getElementById("hamburgerBtn");
+        const overlay = document.getElementById("mobileOverlay");
+        const closeBtn = document.getElementById("closeMenuBtn");
+        const allNavLinks = document.querySelectorAll("[data-nav]");
+
+        // scroll effect
+        function handleScroll() {
+          if (window.scrollY > 20) {
+            nav.classList.add("scrolled");
+          } else {
+            nav.classList.remove("scrolled");
+          }
+        }
+        window.addEventListener("scroll", handleScroll, { passive: true });
+        handleScroll();
+
+        // mobile menu
+        function openMenu() {
+          overlay.classList.add("open");
+          hamburger.setAttribute("aria-expanded", "true");
+          document.body.style.overflow = "hidden";
+        }
+
+        function closeMenu() {
+          overlay.classList.remove("open");
+          hamburger.setAttribute("aria-expanded", "false");
+          document.body.style.overflow = "";
+        }
+        hamburger.addEventListener("click", openMenu);
+        closeBtn.addEventListener("click", closeMenu);
+        overlay.addEventListener("click", function (e) {
+          if (e.target === overlay) closeMenu();
+        });
+
+        // active link + smooth scroll
+        allNavLinks.forEach((link) => {
+          link.addEventListener("click", function (e) {
+            // remove active from all
+            allNavLinks.forEach((l) => l.classList.remove("active"));
+            this.classList.add("active");
+            if (overlay.classList.contains("open")) closeMenu();
+            // smooth scroll (Bootstrap handles via #)
+          });
+        });
+
+        // set active based on scroll (optional)
+        const sections = [
+          "about",
+          "skills",
+          "services",
+          "projects",
+          "experience",
+          "contact",
+        ];
+        window.addEventListener("scroll", function () {
+          let current = "";
+          sections.forEach((id) => {
+            const el = document.getElementById(id);
+            if (el && window.scrollY >= el.offsetTop - 150) {
+              current = id;
+            }
+          });
+          allNavLinks.forEach((link) => {
+            link.classList.toggle(
+              "active",
+              link.getAttribute("href") === "#" + current,
+            );
+          });
+        });
+
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape" && overlay.classList.contains("open"))
+            closeMenu();
+        });
+        window.addEventListener("resize", function () {
+          if (window.innerWidth >= 992 && overlay.classList.contains("open"))
+            closeMenu();
+        });
+      })();
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
